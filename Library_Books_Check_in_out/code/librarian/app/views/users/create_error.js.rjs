@@ -1,0 +1,2 @@
+page.replace_html 'error_details', render(:partial => 'user_error', :locals => { :user => @user })
+page.replace_html 'confirm', ""

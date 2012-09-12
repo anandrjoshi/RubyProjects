@@ -1,0 +1,8 @@
+Total [30]: 26
+Good validation [5]:
+Tests pass [5]:
+Code coverage [5]: -2
+Route url / to something meaningful  [5]:
+Styling, beyond regular scaffolding [5]:
+Reasonable Ajaxing [5]: -2 Lacking in this in some obvious places, plus 
+redundant input being asked.

@@ -1,0 +1,56 @@
+                   books GET    /books(.:format)                        {:action=>"index", :controller=>"books"}
+                         POST   /books(.:format)                        {:action=>"create", :controller=>"books"}
+                new_book GET    /books/new(.:format)                    {:action=>"new", :controller=>"books"}
+               edit_book GET    /books/:id/edit(.:format)               {:action=>"edit", :controller=>"books"}
+                    book GET    /books/:id(.:format)                    {:action=>"show", :controller=>"books"}
+                         PUT    /books/:id(.:format)                    {:action=>"update", :controller=>"books"}
+                         DELETE /books/:id(.:format)                    {:action=>"destroy", :controller=>"books"}
+              menu_index GET    /menu(.:format)                         {:action=>"index", :controller=>"menu"}
+                         POST   /menu(.:format)                         {:action=>"create", :controller=>"menu"}
+                new_menu GET    /menu/new(.:format)                     {:action=>"new", :controller=>"menu"}
+               edit_menu GET    /menu/:id/edit(.:format)                {:action=>"edit", :controller=>"menu"}
+                    menu GET    /menu/:id(.:format)                     {:action=>"show", :controller=>"menu"}
+                         PUT    /menu/:id(.:format)                     {:action=>"update", :controller=>"menu"}
+                         DELETE /menu/:id(.:format)                     {:action=>"destroy", :controller=>"menu"}
+                   users GET    /users(.:format)                        {:action=>"index", :controller=>"users"}
+                         POST   /users(.:format)                        {:action=>"create", :controller=>"users"}
+                new_user GET    /users/new(.:format)                    {:action=>"new", :controller=>"users"}
+               edit_user GET    /users/:id/edit(.:format)               {:action=>"edit", :controller=>"users"}
+                    user GET    /users/:id(.:format)                    {:action=>"show", :controller=>"users"}
+                         PUT    /users/:id(.:format)                    {:action=>"update", :controller=>"users"}
+                         DELETE /users/:id(.:format)                    {:action=>"destroy", :controller=>"users"}
+    book_check_out_index GET    /book_check_out(.:format)               {:action=>"index", :controller=>"book_check_out"}
+                         POST   /book_check_out(.:format)               {:action=>"create", :controller=>"book_check_out"}
+      new_book_check_out GET    /book_check_out/new(.:format)           {:action=>"new", :controller=>"book_check_out"}
+     edit_book_check_out GET    /book_check_out/:id/edit(.:format)      {:action=>"edit", :controller=>"book_check_out"}
+check_out_book_check_out PUT    /book_check_out/:id/check_out(.:format) {:action=>"check_out", :controller=>"book_check_out"}
+          book_check_out GET    /book_check_out/:id(.:format)           {:action=>"show", :controller=>"book_check_out"}
+                         PUT    /book_check_out/:id(.:format)           {:action=>"update", :controller=>"book_check_out"}
+                         DELETE /book_check_out/:id(.:format)           {:action=>"destroy", :controller=>"book_check_out"}
+     book_check_in_index GET    /book_check_in(.:format)                {:action=>"index", :controller=>"book_check_in"}
+                         POST   /book_check_in(.:format)                {:action=>"create", :controller=>"book_check_in"}
+       new_book_check_in GET    /book_check_in/new(.:format)            {:action=>"new", :controller=>"book_check_in"}
+      edit_book_check_in GET    /book_check_in/:id/edit(.:format)       {:action=>"edit", :controller=>"book_check_in"}
+  check_in_book_check_in PUT    /book_check_in/:id/check_in(.:format)   {:action=>"check_in", :controller=>"book_check_in"}
+           book_check_in GET    /book_check_in/:id(.:format)            {:action=>"show", :controller=>"book_check_in"}
+                         PUT    /book_check_in/:id(.:format)            {:action=>"update", :controller=>"book_check_in"}
+                         DELETE /book_check_in/:id(.:format)            {:action=>"destroy", :controller=>"book_check_in"}
+      search_book_search GET    /book_search/search(.:format)           {:action=>"search", :controller=>"book_search"}
+       book_search_index GET    /book_search(.:format)                  {:action=>"index", :controller=>"book_search"}
+                         POST   /book_search(.:format)                  {:action=>"create", :controller=>"book_search"}
+         new_book_search GET    /book_search/new(.:format)              {:action=>"new", :controller=>"book_search"}
+        edit_book_search GET    /book_search/:id/edit(.:format)         {:action=>"edit", :controller=>"book_search"}
+             book_search GET    /book_search/:id(.:format)              {:action=>"show", :controller=>"book_search"}
+                         PUT    /book_search/:id(.:format)              {:action=>"update", :controller=>"book_search"}
+                         DELETE /book_search/:id(.:format)              {:action=>"destroy", :controller=>"book_search"}
+      search_user_search GET    /user_search/search(.:format)           {:action=>"search", :controller=>"user_search"}
+       user_search_index GET    /user_search(.:format)                  {:action=>"index", :controller=>"user_search"}
+                         POST   /user_search(.:format)                  {:action=>"create", :controller=>"user_search"}
+         new_user_search GET    /user_search/new(.:format)              {:action=>"new", :controller=>"user_search"}
+        edit_user_search GET    /user_search/:id/edit(.:format)         {:action=>"edit", :controller=>"user_search"}
+             user_search GET    /user_search/:id(.:format)              {:action=>"show", :controller=>"user_search"}
+                         PUT    /user_search/:id(.:format)              {:action=>"update", :controller=>"user_search"}
+                         DELETE /user_search/:id(.:format)              {:action=>"destroy", :controller=>"user_search"}
+                    root        /(.:format)                             {:action=>"index", :controller=>"menu"}
+                                /:controller(/:action)                  
+                                /:controller/:id(/:action)              

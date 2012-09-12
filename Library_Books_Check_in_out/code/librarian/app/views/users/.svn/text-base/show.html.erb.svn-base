@@ -1,0 +1,31 @@
+<h1>Member Details</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @user.last_name %>
+</p>
+
+<% if @user.books.length > 0 %>
+<p>
+  <b>Books checked out:</b>
+  <ul>
+    <% for book in @user.books  %>
+      <li>
+        <%= book.title %> (<%= link_to 'Check In', book_check_in_path(book)%>)
+      </li>
+    <% end %>
+  </ul>
+</p>
+<%else%>
+  <p>No books checked out.</p>
+<%end%>
+
+<%= link_to (image_tag("/images/edit.png")), edit_user_path(@user) %>
+<%= link_to (image_tag("/images/Home.png")), menu_index_path %>

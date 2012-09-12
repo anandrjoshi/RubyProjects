@@ -1,0 +1,16 @@
+require 'rake'
+require 'rake/testtask'
+
+task :default => :test_units
+
+Rake::TestTask.new('test_units') do |t|
+  t.libs << ['src/refactlabs/frugal', 'src/refactlabs/stores', 'src/refactlabs/usefrugal', 'test']
+  t.pattern = 'test/test_*.rb'
+  t.verbose = true
+end
+
+task :run do
+	cd 'src/refactlabs/usefrugal/'
+	ruby 'use_price_finder.rb'
+end
+	

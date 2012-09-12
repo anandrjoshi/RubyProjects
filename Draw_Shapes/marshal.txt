@@ -1,0 +1,5 @@
+o:Diagram:@list_of_shapes[
+o:Square:@x_pivoti,:@y_pivoti,:@lengthi–o:Circle;i,;	i,:@radiusi–o:Rectangle	;i,;	i,;
+i–:@breadthi–o;;i,;	i,;
+i–o;	;i,;	i,;
+i–;i–

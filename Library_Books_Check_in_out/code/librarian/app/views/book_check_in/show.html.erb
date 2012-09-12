@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<h1>Confirm Check In</h1>
+<p>
+  <b>Title:</b>
+  <%= @book.title %>
+</p>
+
+<p>
+  <b>Edition:</b>
+  <%= @book.edition %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%= @book.publisher %>
+</p>
+
+<p>
+  <b>Authors:</b>
+  <%= @book.authors %>
+</p>
+
+<p>
+  <b>Checked Out By:</b>
+  <%= @book.users[0].first_name%>
+  <%= @book.users[0].last_name%>
+</p>
+<div>
+      <%= form_tag :controller => 'book_check_in', :action => 'check_in', :method => 'put' do %>
+      <%= submit_tag "Check In",:type => :image, :src => "/images/Check_in.png" %>
+	  <%= link_to (image_tag("/images/Home.png")), menu_index_path %>
+  </div>
+
+<% end %>
+
+
+

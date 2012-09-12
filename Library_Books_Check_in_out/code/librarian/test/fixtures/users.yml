@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: Rohit
+  last_name: Nirmal
+
+two:
+  first_name: Anand
+  last_name: Joshi

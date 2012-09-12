@@ -1,0 +1,36 @@
+<h1>Confirmation:</h1>
+
+<p>Following book was successfully Checked out.</p>
+
+<p>
+  <b>Title:</b>
+  <%= @book.title %>
+</p>
+
+<p>
+  <b>Edition:</b>
+  <%= @book.edition %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%= @book.publisher %>
+</p>
+
+<p>
+  <b>Authors:</b>
+  <%= @book.authors %>
+</p>
+
+<p>
+  <b>Checked out by:</b>
+  <%= @book.users[0].first_name %>
+	<%= @book.users[0].last_name %>
+</p>
+
+
+<p>
+  <b><%= link_to (image_tag("/images/Check_in.png")), book_check_in_path %></b>
+  <%= link_to (image_tag("/images/Home.png")), menu_index_path %>
+</p>
+

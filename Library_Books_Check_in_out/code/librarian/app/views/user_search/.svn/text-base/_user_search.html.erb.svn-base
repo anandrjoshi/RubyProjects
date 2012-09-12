@@ -1,0 +1,6 @@
+ <%= form_tag :controller => 'user_search', :action => 'search', :method => 'get' do %>
+      <%= text_field_tag :first_name, params[:first_name], :id => 'first_name_search', :placeholder => 'Enter first name'%>
+      <%= text_field_tag :last_name, params[:last_name], :id => 'last_name_search', :placeholder => 'Enter last name' %>
+      <%= submit_tag "Search", :type => :image, :src => "/images/Search.png"%>
+      <%= link_to_function (image_tag("/images/clear_button.gif")), "$('first_name_search').clear(), $('last_name_search').clear()"%>
+  <% end %>

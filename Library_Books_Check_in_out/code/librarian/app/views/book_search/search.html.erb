@@ -1,0 +1,30 @@
+<h1>Search Books</h1>
+ 
+    <%= render 'book_search' %>
+  
+<% if @books != nil %>
+<% if @books.count > 0 %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Edition</th>
+    <th>Publisher</th>
+	<th>Authors</th>
+	<th>Checked out by:</th>
+	<th></th>
+    <th></th>
+  </tr>
+
+<% @books.each do |book| %>
+  <tr class="<%= cycle("even", "odd") %>">
+    <%= render :partial => 'book', :locals => {:book => book }%>
+<% end %>
+</table>
+<% else %>
+<p>No books were found.</p>
+<% end %>
+<% end %>
+
+
+<%= link_to (image_tag("/images/Home.png")), menu_index_path %>
+

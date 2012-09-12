@@ -1,0 +1,89 @@
+Assignment 1: Due 11:59PM September 23
+
+Write a program to play the game of hangman (<http://tinyurl.com/25nfrx>).
+Your version of the game will be played between the computer (selecting
+the word) and a user (guessing the selected word).
+                     
+You can provide a way to load up a list of words (load up at least 10 
+words). How you load and maintain the words is up to you. You can provide
+a programmatic way or it can be outside of your program. It does not
+matter. What is important is that you keep it simple.
+
+There is an example of the program provided in wikipedia (url given above).
+I also ran into a site that allows you to play the game interactively
+(but I have not tried it) at <http://www.hangman.no/>. Your program does
+not have to resemble the program at this site, it is provided here only as
+an example.
+
+Use Test Driven Development to create this program.
+
+Remember, your unit test will not take any user input. Various values
+will be hard coded in it for test purposes. This is because your unit
+tests can't be interactive, they need to be automated.
+
+You can create an interactive command line user interface or a graphical
+user interface, as you please, but keep it as a desktop application.
+In either case, keep the user interface separate from the rest of the code
+that is unit tested.
+
+Feel free to ask any questions, and I will be glad to review your code and
+comment on it anytime you like.
+
+============
+Assignment 1 grading.
+Total [100pts]: 87
+
+Driver program works [20pts]:
+
+Code Quality [20pts]: -1
+return status, @word_as_asterix is too much information to return, make
+it cohesive.
+
+Test Quality [20pts]: -2
+Positive, negative, and exception tests.
+Need more exception and negative tests.
+
+Test Coverage [10pts]: -2
+
+Overall Quality [10pts]: -2
+Design, directory structure, etc.
+
+select_random_word should be in a separate class and unit tested.
+
+Venkat's unit tests pass on your code [20pts]: -6
+
+------------------------------------------------------------------------------
+
+*** Programmers who used Java:
+To run the grading.xml type
+
+ant -buildfile grading.xml
+
+Take a look at the build/coveragereport/index.html file to see code coverage
+
+To run venkat's unit tests run
+
+ant -buildfile venkats.xml
+
+*** Programmers who used C#:
+To run the grading.xml type
+
+nant -buildfile:grading.xml
+
+Take a look at the build/coverageClasses.html file and build/coverage.xml 
+to see code coverage.
+
+To run venkat's unit tests run
+
+nant -buildfile:venkats.xml
+
+*** Programmers who used Ruby:
+To run the grading.rake  type
+
+rake -f grading.rake
+
+Take a look at the coverage/index.html file to see code coverage.
+
+To run venkat's unit tests run
+
+rake -f venkats.rake

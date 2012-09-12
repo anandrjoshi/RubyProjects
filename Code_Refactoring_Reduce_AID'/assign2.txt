@@ -1,0 +1,260 @@
+Assignment 2 Due 11:59PM Oct. 21
+
+First decide which language you like to use. Since I saw students
+use Java, C#, and Ruby in assignment 1, I have provided code in
+those languages. If you prefer to use some other language than these four,
+no worries. Simply let me know which language you like to use and
+I will create a directory with appropriate files for you for that language.
+However, you can use only one language for this assignment.
+
+Tell me which language you are using (I will look only at the code for that 
+language when reviewing and then grading your work).
+
+Language used in this assignment: Ruby
+
+Actively modify the code. Change files, add new files as necessary
+and check them in. Do not delete any directory or create work in progress
+directories. Learn to work with active code.
+
+The program in the code directory determines the lowest price for products
+from three stores (the prices are simulated arbitrarily, however, in
+reality, each Store class will "know" how to communicate with a respective
+webservice. So there is a need for a separate Store class for each store -
+Stores do not and will not use a common API for their services).
+
+Your tasks (remember to checkin frequently):
+1. Determine the value of A, I, and D' for the given code.
+
+Stores Package:
+
+Ca  = [ABCStore, AcmeStore, XYZStore] = 3
+Ce  = 0
+I   = Ce/(Ce+Ca)
+	= 0/(0+3)
+    = 0
+				   
+no_of_abstract_classes = 0
+no_of_classes = [ABCStore, AcmeStore, XYZStore] = 3
+A   = no_of_abstract_classes / no_of_classes
+	= 0/3
+	= 0
+
+D'	= |A + I - 1|	
+	= |0 + 0 - 1|	
+	= 1
+
+Frugal Package:
+			
+Ca = [PriceFinder, PriceInfo] = 2
+Ce = [ABCStore, AcmeStore, XYZStore] = 3
+I  = Ce/(Ce+Ca)
+   = 3/(2+3) 
+   = 0.6
+				   
+no_of_abstract_classes = 0
+no_of_classes = [PriceFinder, PriceInfo] = 2
+A   = no_of_abstract_classes / no_of_classes
+	= 0/2
+	= 0
+
+D'	= |A + I - 1|	
+	= |0 + 0.6 - 1|	
+	= 0.4
+	
+UseFrugal Package:
+			
+Ca  = 0
+Ce  = [PriceFinder, PriceInfo] = 2 
+I   = Ce/(Ce+Ca)
+	= 2/(0+2) 
+    = 1
+				   
+no_of_abstract_classes = 0
+no_of_classes = [UsePriceFinder] = 1
+A   = no_of_abstract_classes / no_of_classes
+	= 0/1
+	= 0
+
+D'	= |A + I - 1|	
+	= |0 + 1 - 1|	
+	= 0	
+	
+D'(average) =(1 + 0.4 + 0)/3
+			= 0.4667
+
+2. Refactor the code so it is extensible to adding new stores (you don't
+want to change any code if a new store is added, expect for adding
+new code for new store).
+
+3. Write unit tests on the class that determines the frugal price.
+(The original code does not lend itself to be easily unit tested).
+No need to write unit tests on the store classes.
+
+4. Try out your code by adding a Store 4.
+
+5. Determine the value of A, I, and D' for your refactored code.
+
+Stores Package:
+
+Ca  = [Store] = 1
+Ce  = 0
+I   = Ce/(Ce+Ca)
+	= 0/(0+1)
+    = 0
+				   
+no_of_abstract_classes = [Store] = 1
+no_of_classes = [ABCStore, AcmeStore, XYZStore, Store] = 4
+A   = no_of_abstract_classes / no_of_classes
+	= 1/4
+	= 0.25
+
+D'	= |A + I - 1|	
+	= |0.25 + 0 - 1|	
+	= 0.75
+
+Frugal Package:
+			
+Ca = [PriceFinder, PriceInfo] = 2
+Ce = [Store] = 1
+I  = Ce/(Ce+Ca)
+   = 1/(2+1) 
+   = 0.33
+				   
+no_of_abstract_classes = 0
+no_of_classes = [PriceFinder, PriceInfo] = 2
+A   = no_of_abstract_classes / no_of_classes
+	= 0/2
+	= 0
+
+D'	= |A + I - 1|	
+	= |0 + 0.33 - 1|	
+	= 0.67
+	
+UseFrugal Package:
+			
+Ca  = 0
+Ce  = [PriceFinder, PriceInfo] = 2 
+I   = Ce/(Ce+Ca)
+	= 2/(0+2) 
+    = 1
+				   
+no_of_abstract_classes = 0
+no_of_classes = [UsePriceFinder] = 1
+A   = no_of_abstract_classes / no_of_classes
+	= 0/1
+	= 0
+
+D'	= |A + I - 1|	
+	= |0 + 1 - 1|	
+	= 0	
+	
+D'(average) =(0.75 + 0.67 + 0)/3
+			= 0.4733
+
+
+6. Explain how the refactored code is better than the old one.
+
+6.1 Refactored Code is extensible:
+The PriceFinder class requires no changes even if several stores are added.
+
+6.2 Refactored Code follows several design principles:
+The old code violated 3 major principles which were taken care of while 
+refactoring the code.
+
+6.3 Refactored Code is more test friendly:
+It was very difficult to write unit tests for the old code while it is much 
+easier to come up with test cases for the refactored code.
+
+6.4 Refactored Code has low coupling:
+Packages are less dependent on one another in the refactored code.
+
+6.5 Refactored Code is less rigid:
+Refactored code can be extended more eaisly with reduced number of changes. 
+
+6.6 Refactored Code is less fragile:
+Old code did not handle errors which the refactored code does.
+
+6.7 Refactored Code has less Needless Complexity:
+Old code was lot more complex than the refactored code.
+
+6.8 Refactored Code has less Needless Repetition:
+Old code a lot of repetition which the refactored code does not have.
+
+7. What design principles did the original code violate. 
+
+Following are the design principles that the given code seems to violate:
+
+7.1: Open Closed Principle(OCP):
+The PriceFinder class is not extensible as addition of every new store
+will require changes to the PriceFinder class. This will require changing
+the if-else hierarchy, creation of new objects based on number of new 
+stores added and 'requiring' of the files that include these new stores.
+
+7.2: Single Responsibility Principle(SRP):
+The PriceFinder class does too many things at once. It creates stores
+objects and gets the lowest price, then creates a PriceInfo object
+and returns the same.
+
+7.3: Dont Repeat Yourself(DRY):
+The if-else section of the PriceFinder class violates this principle. There 
+is unnecessary repetition of code in terms of functionality which results 
+in violation of DRY principle.
+
+If the packages in their current form are given to various customers 
+according to their need then, following principles would be violated
+
+
+7.4: Reuse/Release Equivalence Principle:
+Changes done in the Stores package affect the Frugal package. If a client 
+uses just the Frugal package then he would be unnecessarily affected by 
+any changes in Stores package which he might not be interested.
+
+Characteristics of the code provided:
+High Coupling
+Low Cohesion
+Train-wreck coding style
+need to ask and not inherent tell
+
+8. What design principles did you follow in your solution.
+
+8.1 Open Close Principle:
+This principle was at the center of our design. We wanted the code to be open to 
+extension and closed to modification. We are able to add any number of stores 
+without changing any code in the PriceFinder class. 
+
+8.2 Single Responsibility Principle:
+The methods in the PriceFinder class are divided such that each method does 
+one and only one thing. We do not have a long method that does everything. 
+The PriceFinder class does exactly what it says: finds the lowest price. It 
+is not concerned by creation of store list.
+
+8.3 Do not Repeat Yourself:
+While coding our solution we took care of not repeating ourselves. We have 
+negligible amount of code repetition.
+ 
+
+=================
+Grading [100]: 85
+
+Good use of mocks [20]:
+Test quality (positive, negative, exception) [10]:
+Initial computation of metric values [5]:
+
+Computation of values after redesign [10]: -5
+Need to consider a few design options to lower D'
+
+Principles violated [10]:
+
+Principles used [5]: -2
+DIP is the most prominent principle in the solution
+
+Able to add new store without any change to existing code [20]:
+Code and design quality [10]: -3
+The function to locate stores should not be part of the Store class.
+It should be handled separately by another class.
+
+You can reduce the noise in PriceFinder through one more refactoring using 
+inject method.
+
+Code coverage [10]: -5
+

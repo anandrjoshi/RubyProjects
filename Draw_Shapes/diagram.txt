@@ -1,0 +1,3 @@
+o:Diagram:@list_of_shapes[o:
+Group:@shapes[o;;[o:Square:@x_pivoti:@y_pivoti:@lengthi-o:Rectangle	;
+i;i;i:@breadthi

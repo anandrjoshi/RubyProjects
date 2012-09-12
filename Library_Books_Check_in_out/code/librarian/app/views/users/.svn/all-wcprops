@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/u11_ror/!svn/ver/1667/joshi_nirmal/project/code/librarian/app/views/users
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/u11_ror/!svn/ver/1667/joshi_nirmal/project/code/librarian/app/views/users/edit.html.erb
+END
+_user_error.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/u11_ror/!svn/ver/1598/joshi_nirmal/project/code/librarian/app/views/users/_user_error.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/u11_ror/!svn/ver/1665/joshi_nirmal/project/code/librarian/app/views/users/index.html.erb
+END
+destroy.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/u11_ror/!svn/ver/1598/joshi_nirmal/project/code/librarian/app/views/users/destroy.js.rjs
+END
+_edit_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/u11_ror/!svn/ver/1667/joshi_nirmal/project/code/librarian/app/views/users/_edit_form.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/u11_ror/!svn/ver/1576/joshi_nirmal/project/code/librarian/app/views/users/new.html.erb
+END
+delete_error.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/u11_ror/!svn/ver/1665/joshi_nirmal/project/code/librarian/app/views/users/delete_error.js.rjs
+END
+create_error.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/u11_ror/!svn/ver/1656/joshi_nirmal/project/code/librarian/app/views/users/create_error.js.rjs
+END
+_user.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/u11_ror/!svn/ver/1598/joshi_nirmal/project/code/librarian/app/views/users/_user.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/u11_ror/!svn/ver/1599/joshi_nirmal/project/code/librarian/app/views/users/show.html.erb
+END
+create.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/u11_ror/!svn/ver/1656/joshi_nirmal/project/code/librarian/app/views/users/create.js.rjs
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/u11_ror/!svn/ver/1656/joshi_nirmal/project/code/librarian/app/views/users/_form.html.erb
+END

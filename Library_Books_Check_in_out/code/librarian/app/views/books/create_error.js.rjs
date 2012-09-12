@@ -1,0 +1,2 @@
+page.replace_html 'error_details', render(:partial => 'book_error', :locals => { :book => @book })
+page.replace_html 'confirm_book', ""

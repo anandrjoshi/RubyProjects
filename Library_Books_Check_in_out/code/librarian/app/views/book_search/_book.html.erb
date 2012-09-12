@@ -1,0 +1,16 @@
+<%= raw "<tr id='book_#{book.id}'>" %>
+  <DIV id="error_details"></DIV>
+  <td><%= book.title %></td>
+    <td><%= book.edition %></td>
+    <td><%= book.publisher %></td>
+    <td><%= book.authors %></td>
+	<% if book.users.size == 1%>
+	<td><%= book.users[0].first_name %>
+	<%= book.users[0].last_name %>
+	(<%= link_to 'Check In', book_check_in_path(book)%>)</td>
+	<%else%>
+	<td>Nobody (<%= link_to 'Check Out', book_check_out_path(book) %>)</td>
+	<%end%>
+	<td><%= link_to 'Edit', edit_book_path(book) %></td>
+    <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete, :remote => true %></td>
+  </tr>

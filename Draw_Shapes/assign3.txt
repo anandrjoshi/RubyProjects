@@ -1,0 +1,62 @@
+Assignment 3: Due 11:59PM Friday Nov. 18
+
+Create an application that will allow the user to draw various shapes
+(start with Square, rectangle, circle).
+The user can
+(a) group shapes and also create group of groups.
+(b) can delete any shape or group
+(c) can create any shape on the drawing
+(d) move any shape or group around
+(e) New shapes can be introduced without any need to modify existing code
+(f) save the diagram and reload it
+
+Once you complete the coding, answer the following questions:
+(Hint: Don't set out looking for principles and patterns to use;
+once you finish, these should emerge out from your design rather than
+be forced into it).
+
+1. What design principles did you predominantly use? Explain where
+you used them.
+
+Design Principles followed while working on this assignment are:
+
+1. Open Closed Priciple:
+We tried to implement OCP very diligently. Except for few instances in UI 
+our code is extensible to adding of new shapes without having to make a lot 
+of changes to the code. New shape can be added with Shape class as its 
+base class. Then, except for adding the actual class and the UI related 
+to that shape no code changes are necessary.
+
+2. Liskov's Substitution Principle:
+We have an abstract Shape class which forms base class to all the shapes. 
+Where ever we use the Shape class object, derived class object can be used 
+without having to ask for which class the object belongs to.
+
+2. What design patterns did you predominantly use? Explain where
+you used them.
+
+Following are the design patterns that we used while working on this assignment:
+
+1. Iterator pattern:
+We have extensively used internal as well as external iterators while working on 
+our Assignment. We have used ".each" in Shape, Group, Diagram and Draw class 
+which is an internal iterator. We also used a "do...end" which is an external 
+iterator in the Shape, Diagram and Draw classes.
+
+2. Abstract Factory:
+We have Class name which act as Abstract Factory in the Shape class to find the 
+descendants of the Shape class.
+
+Total [100]: 80
+Code works and all tests pass [20]:
+Code coverage for non-ui code [10]:
+Test quality for Diagram [20]:
+Test quality for Group [20]:
+class Mock_Painter this should give you an indication you are heading in the
+wrong direction. Unnecessary complexity due to poor coupling.
+
+Design quality [20]: -20
+Need to completely eliminate coupling of the UI from the core classes.
+Duplication between Drawing and Group needs to be removed.
+
+Answer to questions [10]:

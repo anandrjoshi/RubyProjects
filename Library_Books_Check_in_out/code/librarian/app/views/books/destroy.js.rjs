@@ -1,0 +1,2 @@
+page.visual_effect :fade, "book_#{@book.id}", :duration => 0.3
+page.replace_html 'error_details', ""

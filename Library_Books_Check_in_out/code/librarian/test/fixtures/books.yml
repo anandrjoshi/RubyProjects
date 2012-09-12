@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: The Codex
+  edition: 2011
+  publisher: DarkUnderlord
+  authors: Rohit Nirmal
+
+two:
+  title: 1984
+  edition: 1
+  publisher: Bantam
+  authors: George Orwell

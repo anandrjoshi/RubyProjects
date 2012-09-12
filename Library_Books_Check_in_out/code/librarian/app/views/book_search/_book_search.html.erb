@@ -1,0 +1,5 @@
+ <%= form_tag :controller => 'book_search', :action => 'search', :method => 'get' do %>
+      <%= text_field_tag :title, params[:title], :id => 'title_search', :placeholder => 'Enter title of the book' %>
+      <%= submit_tag "Search",:type => :image, :src => "/images/Search.png"%>
+      <%= link_to_function (image_tag("/images/clear_button.gif")), "$('title_search').clear()" %>
+  <% end %>

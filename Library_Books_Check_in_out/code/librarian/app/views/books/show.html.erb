@@ -1,0 +1,44 @@
+<h1>Book Details</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @book.title %>
+</p>
+
+<p>
+  <b>Edition:</b>
+  <%= @book.edition %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%= @book.publisher %>
+</p>
+
+<p>
+  <b>Authors:</b>
+  <%= @book.authors %>
+</p>
+
+<% if @book.users.length == 1 %>
+<p>
+  <b>Checked out by:</b>
+  <%= @book.users[0].first_name %>
+	<%= @book.users[0].last_name %>
+</p>
+<% end %>
+
+</p>
+&nbsp &nbsp
+<% if @book.users.length == 0 %>
+<%= link_to (image_tag("/images/Check_out.png")), book_check_out_path(@book) %>
+<% else %>
+<%= link_to (image_tag("/images/Check_in.png")), book_check_in_path(@book) %>
+<% end %>
+<%= link_to (image_tag("/images/edit.png")), edit_book_path(@book) %>
+<%= link_to (image_tag("/images/Home.png")), menu_index_path %>
+</p>
+
+

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Members</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+	<th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <%= render :partial => 'user', :locals => {:user => user }%>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to (image_tag("/images/Add_User.png")), new_user_path %>
+<%= link_to (image_tag("/images/Home.png")), menu_index_path %>

@@ -1,0 +1,19 @@
+On Nov 19, 2011, at 2:38 PM, Toan Tran wrote:
+
+Hi Venkat,
+
+We were so caught up in developing our project that we forgot to add instructions for you to run it.
+
+We installed a gem called 'rubygame' but the latest version of one of its dependencies is not compatible. We solved it by installing an older version of that particular gem and then installing rubygame
+
+gem install ffi -v 1.0.9
+gem install rubygame
+
+after the 5 gems are installed, you should be able to call 'rake runui' to see our program. We have not tested this on a Mac machine - we have been developing on windows machines.
+
+Thank you,
+Toan Tran
+tntran.5@gmail.com
+
+Venkat
+

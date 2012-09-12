@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<h1>Check Out Book</h1>
+<p>
+  <b>Title:</b>
+  <%= @book.title %>
+</p>
+
+<p>
+  <b>Edition:</b>
+  <%= @book.edition %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%= @book.publisher %>
+</p>
+
+<p>
+  <b>Authors:</b>
+  <%= @book.authors %>
+</p>
+
+<div>
+    <%= form_tag :controller => 'book_check_out', :action => 'check_out', :method => 'put' do %>
+    <%= text_field_tag :first_name, params[:first_name], :id => 'first_name_out', :placeholder => 'First Name' %>
+	<%= text_field_tag 'last_name', params[:last_name], :id => 'last_name_out', :placeholder => 'Last Name', :show => 'false'%>
+    <%= submit_tag "Check Out",:type => :image, :src => "/images/Check_out.png" %>
+  </div>
+
+<% end %>
+
+<%= link_to (image_tag("/images/Home.png")), menu_index_path %>
+

@@ -1,0 +1,147 @@
+Assignment 4: Due 11:59PM Friday December 9th
+
+You have a Gate class in your application as shown below:
+
+//C++
+class Gate
+{
+public:
+        virtual void setInput1(bool input) = 0; 
+        virtual void setInput2(bool input) = 0; 
+
+        virtual bool output() = 0; //Computes and returns output of Gate 
+				   //based on the current values of input.
+};
+
+Java and C# folks, consider the above as interface instead of pure
+abstract class. Ruby folks, you can explore modules may be.
+
+You have to integrate with a third party LogicOR given below:
+
+//C++
+//LogicOR.h
+class LogicOR
+{       
+public:
+        LogicOR(int numberOfInputs);
+                // numberOfInputs that this LogicOR will allow.
+                
+        virtual ~LogicOR();        
+
+        virtual bool setInput(int inputNumber, bool value);
+                // Given the input number (0 based index) and value,
+                // sets the logical state of input to the given value.
+                // Returns a false if inputNumber is invalid.
+
+        virtual void trigger();
+                // Takes the values of the input and computes the
+                // output. Any further changes to the input state will not
+                // affect the output until trigger is called again.
+
+        virtual bool output();
+                // Returns the output state of the LogiOR gate.
+                // Note, changes to the logical state of the input
+                // do not take effect until trigger is called.
+
+private:
+        int numberOfInputs;
+        bool* inputStates;
+        bool outputState;
+};
+
+//LogicOR.cpp
+#include "LogicOR.h"
+
+LogicOR::LogicOR(int inputCount)
+{
+        numberOfInputs = inputCount;
+        inputStates = new bool[numberOfInputs];
+
+        for (int i = 0; i < numberOfInputs; i++)
+        {
+                inputStates[i] = false;
+        }
+
+        outputState = false;
+}
+
+LogicOR::~LogicOR()
+{
+        delete[] inputStates;
+}
+
+bool LogicOR::setInput(int inputNumber, bool value)
+{
+        bool bResult = false;
+
+        if (inputNumber < numberOfInputs)
+        {
+                inputStates[inputNumber] = value;
+                bResult = true;
+        }
+
+        return bResult;
+}
+
+void LogicOR::trigger()
+{
+        outputState = false;
+        for (int i = 0; i < numberOfInputs; i++)
+        {
+                if (inputStates[i] == true)
+                {
+                        outputState = true;
+                        break;
+                }
+        }
+}
+
+bool LogicOR::output()
+{
+        return outputState;
+}
+
+
+Java, C#, Ruby folks, you can translate the above code to your favorite
+language. If you are not sure, check in and ask me to review.
+
+1. Write complete code for a class adapter that will adapt
+the LogicOR to your application's Gate's interface.
+
+2. Write complete code for an object adapter that will adapt
+the LogicOR to your application's Gate's interface.
+
+3. Write unit tests that will accept and exercise the Gate interface.
+Then use those same tests to exercise both the adapters.
+
+4. Using the above example, explain (you can write your answer below)
+  in what ways the class adapter is better than object adapter and also 
+  in what ways the object adapter is better than the class adapter.
+
+Why class adapter is better:
+
+4.1.1 Class adapter gives you the advantage of modifying the behavior of the functions 
+      of class from which the adapter inherits.
+4.1.2 Class adpater does not require all the code required to implement delegation.	
+
+Why object adapter is better:
+
+4.2.1 Object adapters provide you with flexibility of adapting not only to a class but 
+	  also its derived classes.
+
+5. What design pattern did you use in writing your tests for the two adapters.
+
+While developing the design patterns we did not use any design particular design pattern.
+
+Total [100]: 95
+All tests pass [10]:
+Code coverage [10]:
+Test quality [20]:
+No duplication between the two tests [20]:
+Adapters implemented well [10]:
+Code quality [20]:
+Answer to question 4 [5]:
+
+Answer to question 5 [5]: -5
+You're using quite a few patterns actually, you just don't recognize them.
+Mixins to provide a factory method behavior, for example.

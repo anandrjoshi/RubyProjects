@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Books</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>Title</th>
+    <th>Edition</th>
+    <th>Publisher</th>
+    <th>Authors</th>
+  </tr>
+
+<% @books.each do |book| %>
+  <%= render :partial => 'book', :locals => {:book => book }%>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to (image_tag("/images/Add_book.png")), new_book_path %>
+<%= link_to (image_tag("/images/home.png")), menu_index_path %>
+ 

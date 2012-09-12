@@ -1,0 +1,10 @@
+
+
+class RunGate
+
+	def run_gate (logicOR, input_one, input_two)
+		logicOR.first_input(input_one)
+		logicOR.second_input(input_two)
+		logicOR.output
+	end
+end
